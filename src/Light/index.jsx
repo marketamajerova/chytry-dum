@@ -9,7 +9,6 @@ const Light = ({name, state}) => {
    const [stateLight, setStateLight] = useState(state);    
 
    const handleClick = () => {
-        console.log('neco delam')
         if (stateLight === 'on') {
             setStateLight('off')
         } else {
