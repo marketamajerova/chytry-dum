@@ -9,8 +9,7 @@ import Dashboard from './Dashboard';
 const App = () => (
   <div className="container">
     <Header />
-    <Dashboard />
-    {/* <Dashboard data={smartHomeData}/> */}
+    <Dashboard data={smartHomeData}/>
   </div>
 );
 

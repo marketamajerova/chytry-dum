@@ -6,14 +6,21 @@ import LightOff from './images/light-off.svg'
 
 const Light = ({name, state}) => {
     
-   const [lightState, setLightState] = useState('on');    
+   const [stateLight, setStateLight] = useState(state);    
+
+   const handleClick = () => {
+        console.log('neco delam')
+        if (stateLight === 'on') {
+            setStateLight('off')
+        } else {
+            setStateLight('on')
+        }
+   }
     
     return (
-        <div className="light" onclick="setLightState">
+        <div className="light" onClick={handleClick}>
             <div className="light__icon">
-                <img src = {
-                    state === "on" ? LightOn : LightOff
-                    } />
+                <img src = {stateLight === 'on' ? LightOn : LightOff} />
             </div>
             <div className="light__name">
                 {name}
